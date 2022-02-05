@@ -36,3 +36,22 @@ def getClients(filename):
         clients.append([likes, dislikes])
 
     return clients, ingredients
+
+
+def calculateIngredientImpact(ingredient, clients, currentUserScores):
+    impact = 0
+    for user in range(len(clients)):
+        if ingredient in clients[user][0]:
+            numberOfIngredients = len(clients[user][0])
+            impact += 1 / numberOfIngredients
+        elif ingredient in clients[user][1]:
+            impact -= currentUserScores[user]
+    return impact
+
+
+def getAllIngredientImpacts(ingredients, clients, userscores):
+    ingredientsImpact = {"": 0}
+    for ingredient in ingredients:
+        ingredientsImpact[ingredient] = calculateIngredientImpact(ingredient, clients, userscores)
+
+    return ingredientsImpact
