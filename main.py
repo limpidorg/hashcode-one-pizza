@@ -16,6 +16,9 @@ for client in clients:
     clientSorted.append([ingredientsImpact["".join(client[1])], client])
 
 clientSorted = sorted(clientSorted, key=itemgetter(0))
+clientSorted.reverse()
+
+print(clientSorted)
 
 approvedClients = []
 approvedLikes = []
