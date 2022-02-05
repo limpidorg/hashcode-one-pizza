@@ -4,5 +4,7 @@ repackage.up()
 
 from utils import getClients
 
-clients = getClients("A.txt")
+clients, ingredients = getClients("A.txt")
 print(clients)
+print("=================")
+print(ingredients)
