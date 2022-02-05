@@ -10,10 +10,10 @@ def getClients(filename):
     pClients = int(linesChanged[0])
 
     clients = []
+    ingredients = []
     linesChanged.pop(0)
 
     for i in range(0, pClients * 2, 2):
-        print(linesChanged[i])
         likes = []
         dislikes = []
 
@@ -23,12 +23,16 @@ def getClients(filename):
             if j == 0:
                 for x in range(len(lineElements)):
                     if x != 0:
+                        if lineElements[x] not in ingredients:
+                            ingredients.append(lineElements[x])
                         likes.append(lineElements[x])
             elif j == 1:
                 for x in range(len(lineElements)):
                     if x != 0:
+                        if lineElements[x] not in ingredients:
+                            ingredients.append(lineElements[x])
                         dislikes.append(lineElements[x])
 
         clients.append([likes, dislikes])
 
-    return clients
+    return clients, ingredients
