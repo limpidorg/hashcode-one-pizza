@@ -1,0 +1,3 @@
+Ingredients count : 7
+Ingredients list : ['dlust', 'xveqd', 'tfeej', 'vxglq', 'luncl', 'byyii', 'xdozp']
+Number of clients : 5 / 10

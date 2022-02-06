@@ -35,7 +35,7 @@ def getClients(filename):
 
         clients.append([likes, dislikes])
 
-    return clients, ingredients
+    return clients, ingredients, pClients
 
 
 def calculateIngredientImpact(ingredient, clients, currentUserScores):
@@ -50,7 +50,7 @@ def calculateIngredientImpact(ingredient, clients, currentUserScores):
 
 
 def getAllIngredientImpacts(ingredients, clients, userscores):
-    ingredientsImpact = {"": 0}
+    ingredientsImpact = {"": 100}
     for ingredient in ingredients:
         ingredientsImpact[ingredient] = calculateIngredientImpact(ingredient, clients, userscores)
 
