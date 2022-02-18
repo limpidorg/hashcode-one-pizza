@@ -1,3 +1,1 @@
-Ingredients count : 6
-Ingredients list : ['dlust', 'xveqd', 'vxglq', 'akuof', 'luncl', 'byyii']
-Number of clients : 5 / 5
+6 dlust xveqd vxglq akuof luncl byyii
