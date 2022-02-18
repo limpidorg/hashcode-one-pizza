@@ -1,3 +1,3 @@
-Ingredients count : 5
-Ingredients list : ['mushrooms', 'tomatoes', 'cheese', 'peppers', '']
+Ingredients count : 4
+Ingredients list : ['mushrooms', 'tomatoes', 'cheese', 'peppers']
 Number of clients : 2 / 3

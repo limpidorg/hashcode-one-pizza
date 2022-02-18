@@ -59,22 +59,24 @@ for FILENAME in FILESNAMES:
     for i in approvedLikes:
         if i not in res:
             res.append(i)
+            
+    resNoEmpty = [x for x in res if x]
 
     print("\n")
-    print(f"Ingredients count : {len(res)}")
-    print(f"Ingredients list : {res}")
+    print(f"Ingredients count : {len(resNoEmpty)}")
+    print(f"Ingredients list : {resNoEmpty}")
     print(f"Number of clients : {len(approvedClients)} / {len(clients)}")
 
     with open(f"./answersStats/{FILENAME}.txt", "w") as f:
-        f.write(f"Ingredients count : {len(res)}\n")
-        f.write(f"Ingredients list : {res}\n")
+        f.write(f"Ingredients count : {len(resNoEmpty)}\n")
+        f.write(f"Ingredients list : {resNoEmpty}\n")
         f.write(f"Number of clients : {len(approvedClients)} / {len(clients)}")
 
     print(f"\n Successfully written to ./answersStats/{FILENAME}.txt")
 
     with open(f"./answers/{FILENAME}.txt", "w") as f:
-        resFormatted = " ".join(res)
-        f.write(f"{len(res)} {resFormatted}")
+        resFormatted = " ".join(resNoEmpty)
+        f.write(f"{len(resNoEmpty)} {resFormatted}")
 
     print(f"\n Successfully written to ./answers/{FILENAME}.txt")
 
